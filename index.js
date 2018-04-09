@@ -4,11 +4,11 @@ var bot = new Discord.Client();
 
 client.on('ready', () => {
   client.user.setStatus("online");
-  client.user.setGame(";help | ZombieBot");
+  client.user.setGame("%help | ZombieBot");
   console.log("Reload Completed!");
 });
 
-const prefix = ";";
+const prefix = "%";
 client.on("message", (message) => {
 
   if (!message.content.startsWith(prefix)) return;
@@ -35,7 +35,7 @@ client.on("message", (message) => {
     message.author.sendMessage({embed: {
      color: 0xbf0000,
      title: "__Zombie Commands:__\n \n",
-     description: "** **\n**;discord ** - Discord Link\n**;creator** - The Creators of the Bot\n**;ping** - Show to you how much Ping you have\n**;avatar** - show your avatar profile\n**;help** - Show this Menu",
+     description: "** **\n**%discord ** - Discord Link\n**%creator** - The Creators of the Bot\n**%ping** - Show to you how much Ping you have\n**%avatar** - show your avatar profile\n**%help** - Show this Menu",
      footer: 
      {
          text: "ZombieBot"
@@ -46,20 +46,20 @@ client.on("message", (message) => {
 });
 
   client.on('message', message => {
-    if (message.content === `;ping`) {
+    if (message.content === `%ping`) {
       message.reply(`Pong! The ping is **${(client.ping).toFixed(0)}**ms!  :ping_pong:`);
     }
   });
 
   client.on('message', message => {
-    if (message.content === ';avatar') {
+    if (message.content === '%avatar') {
       message.reply(message.author.avatarURL);
     }
   });
 
   client.on('message', message => {
     if (message.content === 'test') {
-      message.reply("I am Online, for start type `;help`");
+      message.reply("I am Online, for start type `%help`");
     }
   });
 
