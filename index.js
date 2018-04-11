@@ -38,7 +38,7 @@ client.on("message", (message) => {
     message.author.sendMessage({embed: {
      color: 0xbf0000,
      title: "__Zombie Commands:__\n \n",
-     description: "** **\n**%discord ** - Discord Link\n**%creator** - The Creators of the Bot\n**%ping** - Show to you how much Ping you have\n**%avatar** - show your avatar profile\n**%help** - Show this Menu",
+     description: "** **\n**%discord ** - Discord Link\n**%creator** - The Creators of the Bot\n**%ping** - Show to you how much Ping you have\n**%avatar** - show your avatar profile\n**%youtube** - Youtube Channel\n**%help** - Show this Menu",
      footer: 
      {
          text: "ZombieBot"
@@ -51,12 +51,6 @@ client.on("message", (message) => {
   client.on('message', message => {
     if (message.content === `%ping`) {
       message.reply(`Pong! The ping is **${(client.ping).toFixed(0)}**ms!  :ping_pong:`);
-    }
-  });
-
-  client.on('message', message => {
-    if (message.content === `%youtube`) {
-      message.chat.send(``);
     }
   });
 
