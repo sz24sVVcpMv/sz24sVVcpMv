@@ -37,7 +37,7 @@ client.on("message", (message) => {
   if (message.content === (prefix + "help")) {
     message.author.sendMessage({embed: {
      color: 0xbf0000,
-     icon_url: client.members,
+     icon_url: client.server.iconURL,
      title: "__Zombie Commands:__\n \n",
      description: "** **\n**%discord ** - Discord Link\n**%creator** - The Creators of the Bot\n**%ping** - Show to you how much Ping you have\n**%avatar** - show your avatar profile\n**%youtube** - Youtube Channel\n**%help** - Show this Menu",
      footer: 
