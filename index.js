@@ -38,7 +38,6 @@ client.on("message", (message) => {
     message.author.sendMessage({embed: {
      color: 0xbf0000,
      title: "__Zombie Commands:__\n \n",
-     icon_url: Client.server.iconURL,
      description: "** **\n**%discord ** - Discord Link\n**%creator** - The Creators of the Bot\n**%ping** - Show to you how much Ping you have\n**%avatar** - show your avatar profile\n**%youtube** - Youtube Channel\n**%help** - Show this Menu",
      footer: 
      {
