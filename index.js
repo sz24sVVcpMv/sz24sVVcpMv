@@ -27,6 +27,9 @@ client.on("message", (message) => {
   if (message.content === (prefix + "creator")) {
     message.channel.send("The Creator of the Bot is `Derpy#6522`");
   } else
+  if (message.content === (prefix+ "youtube")) {
+    message.channel.send("**Youtube Channel:**\n** **\nhttps://www.youtube.com/channel/UCKdMasMTxyCezkDItjstSHA");
+  } else
   if (message.content === (prefix + "invite")) {
     message.author.sendMessage("**__Invite The Bot:__**\n \nhttps://discordapp.com/api/oauth2/authorize?client_id=432950161778409472&permissions=0&scope=bot");
     message.reply("Please check your direct messages :mailbox_with_no_mail:");
