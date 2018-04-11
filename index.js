@@ -52,6 +52,12 @@ client.on("message", (message) => {
   });
 
   client.on('message', message => {
+    if (message.content === `%youtube`) {
+      message.chat.send(``);
+    }
+  });
+
+  client.on('message', message => {
     if (message.content === '%avatar') {
       message.reply(message.author.avatarURL);
     }
