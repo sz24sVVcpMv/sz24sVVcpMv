@@ -27,7 +27,7 @@ client.on("message", (message) => {
   if (message.content === (prefix + "creator")) {
     message.channel.send("The Creator of the Bot is `Derpy#6522`");
   } else
-  if (message.content === (prefix+ "youtube")) {
+  if (message.content === (prefix + "youtube")) {
     message.channel.send("**Youtube Channel:**\n** **\nhttps://www.youtube.com/channel/UCKdMasMTxyCezkDItjstSHA");
   } else
   if (message.content === (prefix + "invite")) {
