@@ -41,8 +41,7 @@ client.on("message", (message) => {
      description: "** **\n**%discord ** - Discord Link\n**%creator** - The Creators of the Bot\n**%ping** - Show to you how much Ping you have\n**%avatar** - show your avatar profile\n**%youtube** - Youtube Channel\n**%help** - Show this Menu",
      footer: 
      {
-         timestamp: new Date(),
-         icon_url: client.bot.avatarURL,
+         icon_url: client.user.avatarURL,
          text: "ZombieBot"
      }
    }});
