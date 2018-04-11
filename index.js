@@ -15,7 +15,7 @@ client.on("message", (message) => {
 
   if (message.content === (prefix + "embed")) {
     message.channel.send({embed: {
-      color: 0x008000,
+      color: 0x000000,
       title: "Title",
       description: "** **\nDescription",
       footer: 
