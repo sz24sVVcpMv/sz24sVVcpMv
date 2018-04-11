@@ -48,7 +48,7 @@ client.on("message", (message) => {
 
   client.on('message', message => {
     if (message.content === '-say') {
-      message.reply(channel.id);
+      message.reply(Client.server.name);
     }
   });
 
