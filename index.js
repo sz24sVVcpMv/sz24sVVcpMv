@@ -20,8 +20,8 @@ client.on("message", (message) => {
       description: "** **\nDescription",
       footer: 
       {
-          icon_url: client.user.avatarURL,
-          text: "TestBot"
+         icon_url: client.user.avatarURL,
+         text: "TestBot"
       }
     }});
   } else
