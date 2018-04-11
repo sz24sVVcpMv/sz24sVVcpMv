@@ -15,7 +15,7 @@ client.on("message", (message) => {
 
   if (message.content === (prefix + "discord")) {
     message.channel.send({embed: {
-      color: 3447003,
+      color: 0x008000,
       title: "__Zombie Discord:__\n \n",
       description: "** **\nhttps://discord.gg/ZqsBYV5",
       footer: 
@@ -36,7 +36,7 @@ client.on("message", (message) => {
   } else
   if (message.content === (prefix + "help")) {
     message.author.sendMessage({embed: {
-     color: 0xbf0000,
+     color: 0x008000,
      title: "__Zombie Commands:__\n \n",
      description: "** **\n**%discord ** - Discord Link\n**%creator** - The Creators of the Bot\n**%ping** - Show to you how much Ping you have\n**%avatar** - show your avatar profile\n**%youtube** - Youtube Channel\n**%help** - Show this Menu",
      footer: 
