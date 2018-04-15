@@ -52,10 +52,10 @@ client.on("message", (message) => {
     }
   });
 
-  bot.on('message', function(user, userID, channelID, message, rawEvent) {
+  client.on('message', function(user, userID, channelID, message, rawEvent) {
       if (message === "!test") { // command to trigger
         var interval = setInterval (function (){
-          bot.sendMessage({
+          client.sendMessage({
             to: 423508896557039616,
             message: "pong" // message to send
           });
