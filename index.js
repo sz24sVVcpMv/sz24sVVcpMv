@@ -56,7 +56,7 @@ bot.on('message', function(user, userID, channelID, message, rawEvent) {
     if (message === "!test") { // command to trigger
       var interval = setInterval (function (){
         bot.sendMessage({
-          to: channelID,
+          to: 423508896557039616,
           message: "pong" // message to send
         });
       }, 1000); // time between each interval in milliseconds
