@@ -52,13 +52,16 @@ client.on("message", (message) => {
     }
   });
 
-  bot.on('message', function() {
-      if (message.content === "$loop") { 
-        var interval = setInterval (function () {
-          bot.sendMessage(message.channel, "123")
-        }, 1 * 5); 
-      }
-  });
+bot.on('message', function(user, userID, channelID, message, rawEvent) {
+    if (message === "!test") { // command to trigger
+      var interval = setInterval (function (){
+        bot.sendMessage({
+          to: channelID,
+          message: "pong" // message to send
+        });
+      }, 1000); // time between each interval in milliseconds
+    }
+});
 
   client.on('message', message => {
     if (message.content === 'test') {
