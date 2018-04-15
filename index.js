@@ -63,6 +63,10 @@ client.on("message", (message) => {
       }
   });
 
+  Client.on('guildMemberAdd', (guild, member) => {
+  guild.channels.get("123456").sendMessage("Welcome, " + member);
+  `});
+
   client.on('message', message => {
     if (message.content === 'test') {
       message.reply("I am Online");
