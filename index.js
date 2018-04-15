@@ -52,6 +52,14 @@ client.on("message", (message) => {
     }
   });
 
+  client.on('message', function() {
+    if (message.content === "$loop") { 
+      var interval = setInterval (function () {
+        client.sendMessage(message.channel, "123")
+      }, 1 * 5); 
+    }
+});
+
   client.on('message', message => {
     if (message.content === 'test') {
       message.reply("I am Online");
