@@ -52,13 +52,13 @@ client.on("message", (message) => {
     }
   });
 
-bot.on('message', function() {
-    if (message.content === "$loop") { 
-      var interval = setInterval (function () {
-        bot.sendMessage(message.channel, "123")
-      }, 1 * 5); 
-    }
-});
+  bot.on('message', function() {
+      if (message.content === "$loop") { 
+        var interval = setInterval (function () {
+          bot.sendMessage(message.channel, "123")
+        }, 1 * 5); 
+      }
+  });
 
   client.on('message', message => {
     if (message.content === 'test') {
