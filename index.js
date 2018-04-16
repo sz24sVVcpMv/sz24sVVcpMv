@@ -52,21 +52,6 @@ client.on("message", (message) => {
     }
   });
 
-  client.on('message', function(user, userID, channelID, message, rawEvent) {
-      if (message === "!test") { // command to trigger
-        var interval = setInterval (function (){
-          client.sendMessage({
-            to: 423508896557039616,
-            message: "pong" // message to send
-          });
-        }, 1000); // time between each interval in milliseconds
-      }
-  });
-
-  Client.on('guildMemberAdd', (guild, member) => {
-  guild.channels.get("123456").sendMessage("Welcome, " + member);
-  `});
-
   client.on('message', message => {
     if (message.content === 'test') {
       message.reply("I am Online");
