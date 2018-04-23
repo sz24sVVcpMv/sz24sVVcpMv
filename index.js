@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-client.user.setGame(`Test Bots`);
+client.user.setGame(`Test Bots | >help`);
   console.log(`Bot is Online!`);
 });
 
