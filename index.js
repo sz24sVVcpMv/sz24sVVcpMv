@@ -11,7 +11,6 @@ bot.user.setGame(`Test Bots | >help`);
 });
 
   let prefix = ">";
-  let cmd = messageArray[0];
 
   if(cmd === `${prefix}serverinfo`){
 
