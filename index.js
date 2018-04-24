@@ -12,23 +12,8 @@ bot.user.setGame(`Test Bots | >help`);
 
   let prefix = ">";
 
-  if(cmd === `${prefix}serverinfo`){
-
-    let sicon = message.guild.iconURL;
-    let serverembed = new Discord.RichEmbed()
-     .setDescription("Server Information")
-     .setColor("#15f153")
-     .setThumbnail(sicon)
-     .addField("Server Name", message.guild.name)
-     .addField("Created On", message.guild.createdAt)
-     .addField("Joined At", message.member.joinedAt)
-     .addField("Members", message.guild.memberCount);
-
-   return message.channel.send(serverembed);
- }
-
 bot.on('message', msg => {
-  if (msg.content === 'ping') {
+  if (msg.content === '${prefix}ping') {
     msg.reply('Pong!');
   }
 });
