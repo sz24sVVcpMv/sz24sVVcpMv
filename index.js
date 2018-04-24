@@ -10,11 +10,6 @@ bot.user.setGame(`Test Bots | >help`);
   console.log(`Bot is Online!`);
 });
 
-bot.on("message", async message => {
-  bot.user.setStatus("online");
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
-
   let prefix = ">";
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
