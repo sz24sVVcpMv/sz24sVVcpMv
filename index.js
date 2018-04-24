@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('ready', () => {
-client.user.setGame(`Test Bots | >help`);
+bot.on('ready', () => {
+bot.user.setGame(`Test Bots | >help`);
   console.log(`Bot is Online!`);
 });
 
-client.on("message", async message => {
-  client.user.setStatus("online");
+bot.on("message", async message => {
+  bot.user.setStatus("online");
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
@@ -31,7 +31,7 @@ client.on("message", async message => {
    return message.channel.send(serverembed);
  }
 
-client.on('message', msg => {
+bot.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
   }
