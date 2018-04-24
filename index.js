@@ -13,7 +13,6 @@ bot.user.setGame(`Test Bots | >help`);
   let prefix = ">";
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
-  let args = messageArray.slice(1);
 
   if(cmd === `${prefix}serverinfo`){
 
