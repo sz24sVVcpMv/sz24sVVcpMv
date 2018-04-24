@@ -9,7 +9,7 @@ client.user.setGame(`Test Bots | >help`);
   let prefix = ">";
 
 client.on('message', msg => {
-  if (msg.content === '${prefix}ping') {
+  if (msg.content === '$(prefix)ping') {
     msg.reply('Pong!');
   }
 });
