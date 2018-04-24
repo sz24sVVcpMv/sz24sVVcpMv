@@ -7,7 +7,7 @@ client.user.setGame(`Test Bots | >help`);
 });
 
 client.on('message', msg => {
-  if (msg.content === '{prefix}ping') {
+  if (msg.content === '${prefix}ping') {
     msg.reply('Pong!');
   }
 });
