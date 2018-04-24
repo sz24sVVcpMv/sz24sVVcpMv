@@ -7,6 +7,7 @@ client.user.setGame(`Test Bots | >help`);
 });
 
 client.on("message", async message => {
+  client.user.setStatus("online");
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
