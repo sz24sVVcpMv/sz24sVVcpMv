@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+const bot = new Discord.Client({disableEveryone: true});
+
 bot.on('ready', () => {
 bot.user.setGame(`Test Bots | >help`);
   console.log(`Bot is Online!`);
