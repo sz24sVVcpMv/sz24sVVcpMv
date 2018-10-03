@@ -7,8 +7,6 @@ const client = new Discord.Client();
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-
-client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
 });
 
 client.on("message", async message => {
