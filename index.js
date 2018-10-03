@@ -7,19 +7,8 @@ const client = new Discord.Client();
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-});
-
-client.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
-
-
-  let prefix = botconfig.prefix;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-  //welcome join
+  
+    //welcome join
   client.on('guildMemberAdd', member => {
   client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
     var welcomechannel = client.channels.get('489897345438318592');
@@ -32,6 +21,18 @@ client.on("message", async message => {
   client.on('guildMemberRemove', () => {
       client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
   });
+});
+
+client.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+
+  let prefix = botconfig.prefix;
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+
 
 
 if (cmd === `${prefix}help`){
