@@ -5,8 +5,8 @@ const bot = new Discord.Client();
 const client = new Discord.Client();
 
 
-bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online!`);
+client.on("ready", async () => {
+  console.log(`${client.user.username} is online!`);
   client.user.setGame(`SupportBot | By NiceGames & Date`);
 });
 
