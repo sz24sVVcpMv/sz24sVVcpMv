@@ -5,17 +5,7 @@ const botconfig = require("./botconfig.json");
 
 client.on('ready', () => {
   console.log(`Bot is Online!`);
-  client.user.setGame(`${client.user.size} SupportBot | By NiceGames & Date`);
-});
-
-// Updates the bot's status if he joins a server
-client.on("guildCreate", guild => {
-   client.user.setGame(`${client.user.size} SupportBot | By NiceGames & Date`);
-});
-
-/// Updates the bot's status if he leaves a servers
-client.on("guildDelete", guild => {
-    client.user.setGame(`${client.user.size} SupportBot | By NiceGames & Date`);
+client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
 });
 
 client.on("message", async message => {
@@ -30,12 +20,16 @@ client.on("message", async message => {
 
   //welcome join
   client.on('guildMemberAdd', member => {
+  client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
     var welcomechannel = client.channels.get('489897345438318592');
     if (!welcomechannel) return;
     const joinEmbed = new Discord.RichEmbed()
   .setThumbnail(member.user.avatarURL)
   .setDescription(`!ברוך הבא\n ${member}\nאתה שחקן מספר ${member.guild.memberCount}!`);
   return welcomechannel.send(joinEmbed)
+  });
+  client.on('guildMemberRemove', () => {
+      client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
   });
 
 if (cmd === `${prefix}help`){
