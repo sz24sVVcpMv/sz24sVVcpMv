@@ -7,7 +7,17 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Bot is Online!`);
-  client.user.setGame(`SupportBot | By NiceGames & Date`);
+  client.user.setGame(`${client.user.size} SupportBot | By NiceGames & Date`);
+});
+
+// Updates the bot's status if he joins a server
+client.on("guildCreate", guild => {
+   client.user.setGame(`${client.user.size} SupportBot | By NiceGames & Date`);
+});
+
+/// Updates the bot's status if he leaves a servers
+client.on("guildDelete", guild => {
+    client.user.setGame(`${client.user.size} SupportBot | By NiceGames & Date`);
 });
 
 client.on("message", async message => {
