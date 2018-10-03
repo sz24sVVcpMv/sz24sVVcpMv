@@ -7,20 +7,7 @@ const client = new Discord.Client();
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  
-    //welcome join
-  client.on('guildMemberAdd', member => {
   client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
-    var welcomechannel = client.channels.get('489897345438318592');
-    if (!welcomechannel) return;
-    const joinEmbed = new Discord.RichEmbed()
-  .setThumbnail(member.user.avatarURL)
-  .setDescription(`!ברוך הבא\n ${member}\nאתה שחקן מספר ${member.guild.memberCount}!`);
-  return welcomechannel.send(joinEmbed)
-  });
-  client.on('guildMemberRemove', () => {
-      client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
-  });
 });
 
 client.on("message", async message => {
@@ -33,7 +20,19 @@ client.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
-
+  //welcome join
+  client.on('guildMemberAdd', member => {
+  client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
+    var welcomechannel = client.channels.get('489897345438318592');
+    if (!welcomechannel) return;
+    const joinEmbed = new Discord.RichEmbed()
+  .setThumbnail(member.user.avatarURL)
+  .setDescription(`!ברוך הבא\n ${member}\nאתה שחקן מספר ${member.guild.memberCount}!`);
+  return welcomechannel.send(joinEmbed)
+  });
+  client.on('guildMemberRemove', () => {
+      client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
+  });
 
 if (cmd === `${prefix}help`){
 const helpembed = new Discord.RichEmbed()
