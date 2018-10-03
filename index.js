@@ -8,6 +8,8 @@ const client = new Discord.Client();
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
   client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
+    .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+  .catch (console.error);
 });
 
 client.on("message", async message => {
