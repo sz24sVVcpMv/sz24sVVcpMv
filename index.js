@@ -21,7 +21,7 @@ client.on("message", async message => {
   //welcome join
   client.on('guildMemberAdd', member => {
   client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
-    var welcomechannel = client.channels.get('489897345438318592');
+    var welcomechannel = client.channels.get('');
     if (!welcomechannel) return;
     const joinEmbed = new Discord.RichEmbed()
   .setThumbnail(member.user.avatarURL)
