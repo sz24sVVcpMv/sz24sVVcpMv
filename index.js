@@ -22,7 +22,7 @@ client.on("message", async message => {
 
   //welcome join
   client.on('guildMemberAdd', member => {
-  client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
+  client.user.setGame(`${client.users.size} שחקנים | By NiceGames & Date`);
     var welcomechannel = client.channels.get('489897345438318592');
     if (!welcomechannel) return;
     const joinEmbed = new Discord.RichEmbed()
@@ -31,7 +31,7 @@ client.on("message", async message => {
   return welcomechannel.send(joinEmbed)
   });
   client.on('guildMemberRemove', () => {
-      client.user.setActivity(`${client.users.size} שחקנים | By NiceGames & Date`);
+      client.user.setGame(`${client.users.size} שחקנים | By NiceGames & Date`);
   });
 
 if (cmd === `${prefix}help`){
