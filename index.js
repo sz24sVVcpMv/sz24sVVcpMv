@@ -286,7 +286,5 @@ if(cmd === `${prefix}botinfo`){
   return message.channel.send(botembed);
 }
 
-
 });
-
 client.login(process.env.BOT_TOKEN);
