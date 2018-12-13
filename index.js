@@ -69,7 +69,7 @@ if(cmd === `${prefix}kick`){
   return;
 }
 
-  if (cmd === `${prefix}say`){
+  if (cmd === `${prefix}donttouch`){
   		message.delete()
           const embed = new Discord.RichEmbed()
           .setTitle("הודעת צוות")
