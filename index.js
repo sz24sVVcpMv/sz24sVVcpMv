@@ -75,7 +75,8 @@ if(cmd === `${prefix}kick`){
           .setTitle("הודעת צוות")
   		.setColor(0x00edff)
   		.setDescription(args.join(" "));
-      .setFooter(`message.author.tag`)
+        .addField("ID", bot.user.id)
+  .setFooter("NiceGames");
   		message.channel.send({embed})
 }
   
