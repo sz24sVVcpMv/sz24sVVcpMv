@@ -72,7 +72,7 @@ if(cmd === `${prefix}kick`){
   if (cmd === `${prefix}say`){
   		message.delete()
           const embed = new Discord.RichEmbed()
-          .setTitle("Staff Message")
+          .setTitle("הודעת צוות")
   		.setColor(0x00edff)
   		.setDescription(args.join(" "));
     .setFooter(`${message.author}`)
