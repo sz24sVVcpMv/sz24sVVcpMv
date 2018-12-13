@@ -69,6 +69,14 @@ if(cmd === `${prefix}kick`){
   return;
 }
 
+  if (cmd === `${prefix}say`){
+  		message.delete()
+          const embed = new Discord.RichEmbed()
+  		.setColor(0x954D23)
+  		.setDescription(args.join(" "));
+  		message.channel.send({embed})
+}
+  
 if(cmd === `${prefix}mute`){
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if(!tomute) return message.reply("לא נמצא משתמש.");
