@@ -75,6 +75,7 @@ if(cmd === `${prefix}kick`){
           .setTitle("הודעת צוות")
   		.setColor(0x00edff)
   		.setDescription(args.join(" "));
+      .setFooter(`message.author.tag`)
   		message.channel.send({embed})
 }
   
