@@ -74,7 +74,7 @@ if(cmd === `${prefix}kick`){
           const embed = new Discord.RichEmbed()
           .setTitle("הודעת צוות")
   		.setColor(0x00edff)
-       .setAuthor(message.author.tag)
+       .setAuthor(guild.name, message.author.tag)
   		.setDescription(args.join(" "));
   		message.channel.send({embed})
 }
