@@ -69,13 +69,13 @@ if(cmd === `${prefix}kick`){
   return;
 }
 
-  if (cmd === `${prefix}message`){
+  if (cmd === `${prefix}say`){
   		message.delete()
           const embed = new Discord.RichEmbed()
-          .setAuthor(guild.name, "https://i.imgur.com/JKbJiOj.png")
           .setTitle("Staff Message")
   		.setColor(0x00edff)
   		.setDescription(args.join(" "));
+    .setFooter(`${message.author}`)
   		message.channel.send({embed})
 }
   
