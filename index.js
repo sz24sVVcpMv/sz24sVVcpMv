@@ -76,7 +76,7 @@ if(cmd === `${prefix}kick`){
   		.setColor(0x00edff)
   		.setDescription(args.join(" "))
   .setFooter("NiceGames"))
-  		message.channel.send({embed})
+  		message.channel.send({embed});
 }
   
 if(cmd === `${prefix}mute`){
