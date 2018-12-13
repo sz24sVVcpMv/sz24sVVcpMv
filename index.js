@@ -74,9 +74,8 @@ if(cmd === `${prefix}kick`){
           const embed = new Discord.RichEmbed()
           .setTitle("הודעת צוות")
   		.setColor(0x00edff)
-  		.setDescription(args.join(" "));
-        .addField("ID", bot.user.id)
-  .setFooter("NiceGames");
+  		.setDescription(args.join(" "))
+  .setFooter("NiceGames"));
   		message.channel.send({embed})
 }
   
